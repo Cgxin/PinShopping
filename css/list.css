@@ -1,0 +1,67 @@
+/* 列表页 CSS */
+.nav {
+    /* 这是因为 nav 这个div 行高超出了, 导致下面的 div 显示不正常, 就超出隐藏. */
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #C81523;
+
+    padding: 3px 0 0 14px;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+    line-height: 47px;
+    padding: 0 30px;
+}
+.sk_list ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+    /* 这里行高大于高度 偏下点. */
+    line-height: 49px;
+    padding: 0 20px;
+}
+.sk_con ul li a {
+    font-size: 14px;
+    color: #666;
+}
+.sk_con ul li:nth-child(2) a {
+    color: #c81623;
+}
+.sk_con ul li a:hover {
+    color: skyblue;
+}
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.sk_bd ul li {
+    width: 290px;
+    height: 460px;
+
+    float: left;
+    margin-right: 13px;
+    
+    overflow: hidden; /* 解决 右边和下边 边框不显示. 因为加上边框 超过290px了. */
+    border: 1px solid transparent; /* 移上去之后 hover 加上边框的px 会移动的. */
+}
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
+.sk_bd ul li:nth-child(4n) { /* 第4个 和 第8个 不需要外边距. */
+    margin-right: 0;
+}

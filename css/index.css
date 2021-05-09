@@ -1,0 +1,230 @@
+.main {
+    width: 980px;
+    height: 457px;
+    margin-top: 9px;
+    margin-left: 220px;
+}
+.focus {
+    float: left;
+    width: 720px;
+    height: 457px;
+    background-color: purple;
+}
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 457px;
+}
+.newsflash a {
+    color: #666666;
+}
+.newsflash a:hover {
+    color: skyblue;
+}
+.focus ul li img {
+    width: 100%;
+    height: 100%;
+}
+.news {
+    height: 167px;
+    border: 1px solid #e4e4e4;
+}
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+
+    padding: 0 15px;
+}
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.news-hd .more {
+    float: right;
+}
+/* > */
+.news-hd .more::after {
+    content: '\e920';
+    font-family: 'icomoon';
+    /* 加浮动 和 更多 对齐. */
+    float: right;
+}
+.news-bd {
+    padding: 5px 15px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+
+    /* 文字超出 用省略号显示 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.lifeservice {
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+.lifeservice ul li {
+    float: left;
+    /* 一行4个, 所以 25% */
+    width: 25%;
+    height: 70px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+
+    text-align: center;
+}
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+
+    margin-top: 12px;
+    background: url("../images/03icons.png") no-repeat -16.3px -15px;
+
+    cursor: pointer;
+}
+.lifeservice ul li:nth-child(2) i {
+    background: url("../images/03icons.png") no-repeat -78.3px -15px;
+}
+.lifeservice ul li p {
+    cursor: pointer;
+}
+
+/* 最右边的 去掉 重叠的 右边框 */
+.lifeservice ul li:nth-child(4n) {
+    border-right: 0;
+}
+/* 最下边的 去掉重叠的 下边框 */
+.lifeservice ul li:last-child {
+    border-bottom: 0;
+}
+.lifeservice ul li:nth-last-child(2) {
+    border-bottom: 0;
+}
+.lifeservice ul li:nth-last-child(3) {
+    border-bottom: 0;
+}
+.lifeservice ul li:nth-last-child(4) {
+    border-bottom: 0;
+}
+
+.bargain {
+    margin-top: 6px;
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    background-color: #e4e4e4;
+    margin-top: 12px;
+}
+.recom_hd {
+    float: left;
+    height: 163px;
+    width: 205px;
+    background-color: #5c5251;
+
+    padding-top: 30px;
+    text-align: center;
+}
+.recom_bd {
+    float: left;
+}
+.recom_bd ul li {
+    position: relative;
+    float: left;
+    width: 248px;
+}
+.recom_bd ul li img {
+    /*width: 248px;*/
+    /*height: 163px;*/
+}
+/* 前3个 li.  这里 图片扣的时候 就带着 竖线了, 和这个 伪元素 竖线重合了. */
+.recom_bd ul li:nth-child(-n + 3):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+
+/* 家用电器模块 */
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+.tab_list {
+    float: right;
+    line-height: 30px;
+}
+.tab_list ul li {
+    float: left;
+}
+.tab_list ul li a {
+    margin: 0 15px;
+}
+
+.floor .w {
+    margin-top: 30px;
+}
+.box_bd {
+    height: 361px;
+}
+
+.tab_list_item > div {
+    float: left;
+    height: 361px;
+}
+.col_210 {
+    width: 210px;
+    background-color: #F9F9F9;
+    text-align: center;
+}
+.col_210 ul li {
+    float: left;
+    margin-right: 10px;
+
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #CCC;
+
+    text-align: center;
+    line-height: 33px; /* 因为 height 34px  减去 border-bottom 的1px */
+}
+.col_210 ul li a {
+    color: #666666;
+}
+.col_210 ul li a:hover {
+    color: skyblue;
+}
+.col_210 ul {
+    padding-left: 12px;
+}
+.col_329 {
+    width: 329px;
+}
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #CCC;
+}
+.col_219 {
+    width: 219px;
+}
+.bb {
+    /* 一般情况下, 如果 a 包含有宽度的盒子, 需要转换成 行内块 / 块级, 下边框 才会有效果. */
+    display: block;
+    border-bottom: 1px solid #CCC;
+}

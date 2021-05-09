@@ -1,0 +1,361 @@
+/* 声明字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?z4dmcn');
+    src:  url('../fonts/icomoon.eot?z4dmcn#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?z4dmcn') format('truetype'),
+    url('../fonts/icomoon.woff?z4dmcn') format('woff'),
+    url('../fonts/icomoon.svg?z4dmcn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+/* https://icomoon.io/app/#/select */
+@font-face {
+    font-family: 'icomoonCg';
+    src:  url('../fontsCg/icomoon.eot?z4dmcn');
+    src:  url('../fontsCg/icomoon.eot?z4dmcn#iefix') format('embedded-opentype'),
+    url('../fontsCg/icomoon.ttf?z4dmcn') format('truetype'),
+    url('../fontsCg/icomoon.woff?z4dmcn') format('woff'),
+    url('../fontsCg/icomoon.svg?z4dmcn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.style_red {
+    color: #c81623;
+}
+
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 快捷导航模块 */
+.shortcut {
+    height: 30px;
+    line-height: 30px;
+    background-color: #f1f1f1;
+}
+.shortcut ul li {
+    float: left;
+}
+/* 所有偶数的 li */
+.shortcut .fr ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    margin: 9px 15px;
+    background-color: #666;
+}
+
+.arrow-icon::after {
+    content: "\e91e";
+    font-family: "icomoon";
+    margin-left: 9px;
+}
+
+
+/* header头部模块 */
+.header {
+    position: relative;
+    height: 105px;
+    /*background-color: pink;*/
+}
+.logo {
+    position: absolute;
+    top: 25px;
+
+    width: 171px;
+    height: 61px;
+}
+
+.logo h1 a {
+    display: block;
+    width: 171px;
+    height: 61px;
+    background: url("../images/02logo.png");
+
+    /* 使 文字不显示. */
+    /*font-size: 0;             !* 京东做法 *!*/
+    /*text-indent: -99999px;    !* 淘宝做法 *!*/
+    /*overflow: hidden;*/
+    color: transparent;       /* 我的做法 */
+}
+
+.search {
+    position: absolute;
+    left: 346px;
+    top: 25px;
+
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+.search input {
+    float: left;
+    width: 454px;
+    height: 32px; /* 边框上下2 一共4, 32 + 4 = 36（search的高度） */
+    padding-left: 10px; /* 不会撑大盒子,  box-sizing: border-box; */
+}
+.search button {
+    float: left; /* 浮动是去掉 input 和button之间的边距 */
+    width: 80px; /* 左右2 一共4, 80 + 4 + 454 = 538（search的宽度） */
+    height: 32px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+}
+
+.hotWords {
+    position: absolute;
+    left: 346px;
+    top: 66px;
+}
+.hotWords a {
+    margin: 0 10px;
+}
+.hotWords a:first-child {
+    margin-left: 0;
+}
+
+.shopCar {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+
+    width: 140px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+
+    text-align: center;
+    line-height: 33px;
+}
+.shopCar::before {
+    content: "\ea30";
+    font-family: "icomoonCg";
+    margin-right: 16px;
+
+    font-size: 18px;
+    color: #d94f4f;
+    vertical-align: top; /* 字体图标设置大小后 会错误, 这里让跟文字的顶部对齐 */
+}
+.shopCar::after {
+    /*content: "\e906";*/
+    /*font-family: "icomoonCg";*/
+    content: "\e920";
+    font-family: "icomoon";
+
+    font-size: 18px;
+    color: #c4c4c4;
+    vertical-align: middle; /* 字体图标设置大小后 会错误, 这里让跟文字的中线对齐 */
+}
+.shopCar .count {
+    position: absolute;
+    top: 1px;
+    left: 22px;
+
+    /* 不要给宽度, 因为数量也可能变成 俩位数/三位数, 只给一个高度, 宽度让其撑开就行了. */
+    height: 14px;
+    line-height: 14px;
+    padding: 0 5px; /* 撑开一点, 不然太挤了. */
+    color: #fff;
+    background-color: #e60012;
+
+    border-radius: 7px;
+}
+
+
+/* nav模块 */
+.nav {
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+}
+.nav .dropDown {
+    float: left;
+    width: 210px;
+    height: 45px;
+    background-color: #b1191a;
+}
+.nav .navItems {
+    float: left;
+    width: 850px;
+}
+
+.dropDown {
+    position: relative;
+}
+.dropDown .dt {
+    width: 100%;
+    height: 100%;
+    margin-left: -2px; /* 下面加了 before 伪元素了, 居中不太好使了, 稍微移移. */
+
+    color: #fff;
+    text-align: center;
+    line-height: 45PX;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+.dropDown .dt::before {
+    content: "\e90b";
+    font-family: "icomoonCg";
+
+    margin-right: 12px;
+    font-size: 18px;
+    vertical-align: top;
+}
+/* 这里必须是 .dropDown:hover 不能是 .dropDown .dt:hover  */
+.dropDown:hover .dd {
+    /*display: block;     !* 这里有一个 大坑: CSS3动画 与 display: none 有冲突. *!*/
+
+    /* 使用这种方式显示动画 */
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+    /* 注意 这句 代码 不能加在 下面 .dd里; 否则 刷新时候 会闪烁一下在消失 */
+    transition: 0.5s cubic-bezier(1,0,1,7); /* 淡入 快出 */
+}
+.dropDown .dd {
+    /*display: none;*/
+    position: absolute;
+    top: 47px;
+
+    width: 210px;
+    height: 466px;
+    background-color: #c81623;
+
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+}
+.dropDown .dd ul li {
+    height: 31px;
+    line-height: 31px;
+    margin-left: 1px;
+    padding-left: 10px;
+
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.dropDown .dd ul li::after {
+    float: right;
+    content: "\e920";
+    font-family: "icomoon";
+
+    margin-right: 2px;
+    font-size: 18px;
+    color: #fff;
+    vertical-align: middle; /* 字体图标设置大小后 会错误, 这里让跟文字的中线对齐 */
+}
+.dropDown .dd ul li:hover {
+    background-color: #fff;
+}
+.dropDown .dd ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+.dropDown .dd ul li:hover a {
+    color: #c81623;
+}
+
+.navItems ul li {
+    float: left;
+}
+.navItems ul li a {
+    display: block;
+    height: 45px;
+    padding: 0 10px; /* 增加 小手的范围 */
+    margin: 0 14px;
+
+    line-height: 45px;
+    font-size: 16px;
+
+    color: #666;
+}
+.navItems ul li a:hover {
+    color: #c81623;
+}
+.navItems ul li:first-child {
+    margin-left: 17px;
+}
+
+
+/* 底部模块 */
+.footer {
+    height: 415px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+.mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.mod_service ul li {
+    float: left;
+    width: 300px;
+    height: 50px;
+    padding-left: 35px;
+}
+.mod_service ul li h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    background: transparent url("../images/03icons.png") no-repeat -253px -2px;
+}
+.service_txt h4 {
+    font-size: 14px;
+}
+.service_txt p {
+    font-size: 12px;
+}
+
+.mod_help {
+    height: 185px;
+    padding-top: 20px;
+    padding-left: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.mod_help dl {
+    float: left;
+    width: 200px;
+}
+.mod_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+.mod_help dl:last-child img {
+    width: 100%;
+}
+.mod_help dl:last-child p {
+    margin-top: 3px;
+}
+.mod_help dl dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+.links {
+    margin-bottom: 15px;
+}
+.links a {
+    margin: 0 3px;
+    color: #666;
+}
+.copyright {
+    line-height: 20px;
+}
